@@ -9,7 +9,7 @@ public class Assignment1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity1); // layout can stay as activity1.xml
+        setContentView(R.layout.activity1); 
         Log.d(TAG, "onCreate: Activity Created");
     }
 
