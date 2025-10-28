@@ -8,27 +8,82 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/myTextview"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Implementing Text Controls"
+        android:layout_marginTop="176dp"
+        android:gravity="center"
+        android:text="Welcome to Android UI"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261"
         tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="187dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="28dp"
+        android:text="Enter Name | Country | Car"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTextview"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="209dp"
+        android:layout_height="46dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Name"
+        android:importantForAutofill="no"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelText"
+        tools:ignore="HardcodedText,TextFields" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteCountries"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:hint="Select country"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputName" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="284dp"
-        android:layout_height="79dp"
-        android:layout_marginBottom="308dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/inputName" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="54dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="54dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
